@@ -24,7 +24,7 @@ body {
 .checklist {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-template-rows: repeat(8, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
     gap: 1rem;
     margin: 1rem;
 }
