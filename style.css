@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Indie Flower';
+    src: url(/font/indieflower-regular-webfont.woff) format('woff');
+}
 :root {
     --col1: #442d1c;
     --col2: #743014;
@@ -14,6 +18,7 @@
 
 body {
     background-color: var(--col1);
+    font-family: 'indie flower', cursive;
 }
 
 .checklist {
@@ -84,9 +89,16 @@ progress {
     align-items: center;
 }
 
-input [ type="checkbox"] {
-    accent-color: #84592b;
+.total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--col5);
+    font-weight: 900;  
+    font-size: 1.5rem;
 }
+
+
 
 progress::-webkit-progress-value {background: var(--col3);}
 
@@ -96,7 +108,13 @@ h1, h2 {
     align-items: center;
     color: var(--col5);
 }
- wrapper {
-    padding: 1rem;
-    gap:5px
- }
+
+input {
+    display: inline-flex;
+    gap: 1rem;
+    margin: 1rem;
+    accent-color: #743014;
+    color: var(--col5);
+    height: 1.2rem;
+    width: 1.2rem;
+}

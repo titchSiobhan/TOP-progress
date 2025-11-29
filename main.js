@@ -453,6 +453,8 @@ hires.forEach((hire) => {
 
 let bar = document.querySelector('.progress');
 let checkboxes = document.querySelectorAll('.checkbox');
+const totalDisplay = document.querySelector('.total');
+totalDisplay.setAttribute('class', 'total')
 
 function updateProgress() {
   let checkedCount = document.querySelectorAll('.checkbox:checked').length;
@@ -460,6 +462,7 @@ function updateProgress() {
   
   let progressValue =  (checkedCount / total)  * bar.max// scale to max
   console.log(checkedCount);
+  totalDisplay.textContent = `${checkedCount} / ${total}`
 //   localStorage.setItem('updateProgress', progressValue)
 
  localStorage.setItem('updateProgress', JSON.stringify({
