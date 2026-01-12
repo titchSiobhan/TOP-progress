@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'Indie Flower';
-    src: url(/font/indieflower-regular-webfont.woff) format('woff');
+    scr: url('font/indieflower-regular-webfont.woff2') format('woff2'),;
 }
 :root {
     --col1: #442d1c;
@@ -89,7 +89,7 @@ progress {
     align-items: center;
 }
 
-.total {
+.total, .percent {
     display: flex;
     justify-content: center;
     align-items: center;

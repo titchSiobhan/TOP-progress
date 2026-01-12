@@ -225,23 +225,7 @@ const databasesModule= document.querySelector('.databases');
 const nodeModule =document.querySelector('.node');
 const hiredModule = document.querySelector('.hired');
 
-const foundationShow =document.querySelector('#foundations');
-const intermediateShow =document.querySelector('#intermediate');
-const javascriptShow =document.querySelector('#javascript');
-const advancedShow =document.querySelector('#advanced');
-const reactShow =document.querySelector('#react');
-const databasesShow =document.querySelector('#databases');
-const nodeShow =document.querySelector('#node');
-const hiredShow =document.querySelector('#hired');
 
-const foundationHidden =document.querySelector('#fHidden');
-const intermediateHidden =document.querySelector('#iHidden');
-const javascriptHidden =document.querySelector('#jHidden');
-const advancedHidden =document.querySelector('#aHidden');
-const reactHidden =document.querySelector('#rHidden');
-const databasesHidden =document.querySelector('#dHidden');
-const nodeHidden =document.querySelector('#nHidden');
-const hiredHidden =document.querySelector('#hHidden');
 
 console.log("Foundations:", foundations.length);
 console.log("Intermediates:", intermediates.length);
@@ -264,12 +248,13 @@ const totalItems =
 
 console.log("Total items:", totalItems);
 
+
 //foundations
 
 foundations.forEach((foundation, index) => {
     
     const wrapper = document.createElement('div');
-    wrapper.setAttribute('class', 'hidden')
+    wrapper.setAttribute('class', 'hidden wrapper')
     
    
 
@@ -294,7 +279,7 @@ foundations.forEach((foundation, index) => {
 
 intermediates.forEach((intermediate) => {
     const wrapper = document.createElement('div');
-    wrapper.setAttribute('class', 'hidden');
+    wrapper.setAttribute('class', 'hidden wrapper');
     
    
 
@@ -316,7 +301,7 @@ intermediates.forEach((intermediate) => {
 
 javascripts.forEach((javascript) => {
     const wrapper = document.createElement('div');
-    wrapper.setAttribute('class', 'hidden');
+    wrapper.setAttribute('class', 'hidden wrapper');
     
     
     const check = document.createElement('input');
@@ -338,7 +323,7 @@ javascripts.forEach((javascript) => {
 //advanced html and css
 advances.forEach((advance) => {
     const wrapper = document.createElement('div');
-    wrapper.setAttribute('class', 'hidden');
+    wrapper.setAttribute('class', 'hidden wrapper');
     
    
     
@@ -361,7 +346,7 @@ advances.forEach((advance) => {
 //react
 reacts.forEach((react) => {
     const wrapper = document.createElement('div');
-    wrapper.setAttribute('class', 'hidden');
+    wrapper.setAttribute('class', 'hidden wrapper');
    
    
 
@@ -383,7 +368,7 @@ reacts.forEach((react) => {
 //database
 databases.forEach((database) => {
    const wrapper = document.createElement('div');
-    wrapper.setAttribute('class', 'hidden');
+    wrapper.setAttribute('class', 'hidden wrapper');
    
    
 
@@ -405,7 +390,7 @@ databases.forEach((database) => {
 //node
 nodes.forEach((node) => {
    const wrapper = document.createElement('div');
-    wrapper.setAttribute('class', 'hidden');
+    wrapper.setAttribute('class', 'hidden wrapper');
     
    
 
@@ -429,7 +414,7 @@ nodes.forEach((node) => {
 
 hires.forEach((hire) => {
    const wrapper = document.createElement('div');
-    wrapper.setAttribute('class', 'hidden');
+    wrapper.setAttribute('class', 'hidden wrapper');
     
  
     const check = document.createElement('input');
@@ -455,6 +440,8 @@ let bar = document.querySelector('.progress');
 let checkboxes = document.querySelectorAll('.checkbox');
 const totalDisplay = document.querySelector('.total');
 totalDisplay.setAttribute('class', 'total')
+const percent = document.querySelector('.percent')
+
 
 function updateProgress() {
   let checkedCount = document.querySelectorAll('.checkbox:checked').length;
@@ -463,6 +450,7 @@ function updateProgress() {
   let progressValue =  (checkedCount / total)  * bar.max// scale to max
   console.log(checkedCount);
   totalDisplay.textContent = `${checkedCount} / ${total}`
+  percent.textContent = ((checkedCount / total) * 100).toFixed(2) + '%';
 //   localStorage.setItem('updateProgress', progressValue)
 
  localStorage.setItem('updateProgress', JSON.stringify({
