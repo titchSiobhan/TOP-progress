@@ -98,6 +98,10 @@ let javascripts = [
   "Working with APIs",
   "Async and Await",
   "Project: Weather App",
+
+  "Testing Basics",
+  "Project: Testing Practice",
+  "More Testing",
   "A Very Brief Intro to CS",
   "Recursive Methods",
   "Project: Recursion",
@@ -112,9 +116,7 @@ let javascripts = [
   "A Deeper Look at Git",
   "Working with Remotes",
   "Using Git in the Real World",
-  "Testing Basics",
-  "Project: Testing Practice",
-  "More Testing",
+  
   "Project: Battleship",
   "Conclusion"
 ]
@@ -194,7 +196,7 @@ let nodes = [
   "Testing Database Operations",
   "Project: Where's Waldo (A Photo Tagging App)",
   "Project: Messaging App",
-  "FINAL PROJECT",
+ 
   "Project: Odin-Book",
   "Conclusion"
 ]
